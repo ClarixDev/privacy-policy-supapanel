@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – SupaPanel</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; color: #111; }
+    .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 2.5rem; }
+    h2 { font-size: 1.2rem; margin-top: 2.5rem; margin-bottom: 0.75rem; color: #111; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.4rem; }
+    p { margin-bottom: 1rem; }
+    ul { margin: 0.5rem 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5; color: #888; font-size: 0.85rem; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f0f0f; color: #e5e5e5; }
+      h1, h2 { color: #f5f5f5; }
+      h2 { border-color: #2a2a2a; }
+      .badge { background: #0c1a2e; border-color: #1e3a5f; color: #7dd3fc; }
+      footer { border-color: #2a2a2a; color: #666; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: March 27, 2026</p>
+
+    <span class="badge">SupaPanel – com.supapanel.app</span>
+
+    <p>
+      This Privacy Policy describes how SupaPanel ("we", "us", or "our") handles information
+      when you use the SupaPanel mobile application (the "App"). We are committed to protecting
+      your privacy and being transparent about our practices.
+    </p>
+
+    <h2>1. Who We Are</h2>
+    <p>
+      SupaPanel is a mobile dashboard application for managing Supabase projects. The App is
+      developed and operated as an independent product. For privacy-related enquiries, contact us at:
+      <a href="mailto:ClarixDev@outlook.com">ClarixDev@outlook.com</a>
+    </p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We collect the minimum information necessary to operate the App:</p>
+    <ul>
+      <li>
+        <strong>Anonymous Device Identifier:</strong> A randomly generated UUID (universally unique
+        identifier) is created on first launch and stored securely on your device. This identifier
+        is used solely to associate your device with an active Pro subscription. It contains no
+        personal information and cannot be used to identify you.
+      </li>
+      <li>
+        <strong>Subscription Status:</strong> When you purchase a Pro subscription, our backend
+        server stores your anonymous device UUID, subscription plan, expiry date, and platform
+        (Android/iOS) in a secure database. This information is used exclusively to unlock Pro
+        features in the App.
+      </li>
+      <li>
+        <strong>In-App Purchase Receipt:</strong> When you make a purchase, the purchase receipt
+        is sent to our backend server to verify the transaction with Google Play or Apple App Store.
+        The receipt is used only for verification and is not stored after processing.
+      </li>
+    </ul>
+
+    <h2>3. Information We Do NOT Collect</h2>
+    <ul>
+      <li>We do not collect your name, email address, phone number, or any contact information.</li>
+      <li>
+        We do not collect your Supabase Personal Access Token (PAT). Your PAT is stored exclusively
+        in your device's secure encrypted storage (Android Keystore / iOS Secure Enclave) and is
+        never transmitted to our servers.
+      </li>
+      <li>We do not access your location, camera, microphone, or contacts.</li>
+      <li>We do not use advertising identifiers or track you across other apps or websites.</li>
+      <li>We do not build user profiles or sell data to third parties.</li>
+    </ul>
+
+    <h2>4. How We Use Your Information</h2>
+    <p>The limited information we collect is used exclusively to:</p>
+    <ul>
+      <li>Verify in-app purchases and grant Pro subscription access.</li>
+      <li>Maintain your subscription status across app sessions and reinstalls.</li>
+      <li>Process subscription renewals, cancellations, and refunds.</li>
+    </ul>
+
+    <h2>5. Data Storage and Security</h2>
+    <ul>
+      <li>
+        Your PAT and device UUID are stored on your device using
+        <strong>expo-secure-store</strong> with <code>WHEN_UNLOCKED_THIS_DEVICE_ONLY</code>
+        access policy, backed by AES-256 encryption provided by the Android Keystore system.
+      </li>
+      <li>
+        Subscription data on our server is stored in a Supabase database with
+        row-level security policies that prevent unauthorised reads or writes.
+        Only our backend server (using a service role key) can write subscription records.
+      </li>
+      <li>
+        All network communication between the App and our backend server uses HTTPS (TLS 1.2+).
+      </li>
+    </ul>
+
+    <h2>6. Third-Party Services</h2>
+    <p>The App integrates with the following third-party services:</p>
+    <ul>
+      <li>
+        <strong>Google Play Billing</strong> – processes in-app purchases on Android.
+        Subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>Supabase</strong> – our backend database provider for subscription records.
+        Subject to <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>Supabase Management API</strong> – the App communicates directly with the
+        Supabase Management API using your PAT to display your project data. This communication
+        is between your device and Supabase only; we do not proxy or log it.
+      </li>
+      <li>
+        <strong>Railway</strong> – our backend server is hosted on Railway.
+        Subject to <a href="https://railway.app/legal/privacy" target="_blank" rel="noopener">Railway's Privacy Policy</a>.
+      </li>
+    </ul>
+
+    <h2>7. Data Retention</h2>
+    <p>
+      Subscription records are retained for as long as necessary to fulfil the purposes described
+      in this policy, or as required for legal and accounting obligations (typically up to 7 years
+      for financial records). If you wish to have your subscription record deleted, contact us at
+      <a href="mailto:ClarixDev@outlook.com">ClarixDev@outlook.com</a>.
+    </p>
+    <p>
+      Data stored locally on your device (PAT, device UUID, project cache) can be removed at any
+      time by uninstalling the App or through the App's Settings → Sign Out option.
+    </p>
+
+    <h2>8. Your Rights (GDPR – EEA / UK Residents)</h2>
+    <p>
+      If you are located in the European Economic Area (EEA) or the United Kingdom, you have the
+      following rights under the General Data Protection Regulation (GDPR):
+    </p>
+    <ul>
+      <li><strong>Right of Access:</strong> Request a copy of the data we hold about you.</li>
+      <li><strong>Right to Rectification:</strong> Request correction of inaccurate data.</li>
+      <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request deletion of your data.</li>
+      <li><strong>Right to Restriction:</strong> Request that we restrict processing of your data.</li>
+      <li><strong>Right to Data Portability:</strong> Receive your data in a machine-readable format.</li>
+      <li><strong>Right to Object:</strong> Object to our processing of your data.</li>
+      <li>
+        <strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with
+        your local data protection supervisory authority.
+      </li>
+    </ul>
+    <p>
+      Our legal basis for processing the anonymous device UUID and subscription data is
+      <strong>contract performance</strong> (Article 6(1)(b) GDPR) — the data is necessary
+      to provide the Pro subscription service you purchased.
+    </p>
+    <p>To exercise any of these rights, contact us at <a href="mailto:ClarixDev@outlook.com">ClarixDev@outlook.com</a>.</p>
+
+    <h2>9. Your Rights (CCPA – California Residents)</h2>
+    <p>
+      If you are a California resident, the California Consumer Privacy Act (CCPA) grants you
+      the following rights:
+    </p>
+    <ul>
+      <li><strong>Right to Know:</strong> Request disclosure of the categories and specific pieces of personal information we have collected.</li>
+      <li><strong>Right to Delete:</strong> Request deletion of personal information we have collected.</li>
+      <li><strong>Right to Opt-Out of Sale:</strong> We do not sell personal information. No opt-out is required.</li>
+      <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
+    </ul>
+    <p>To submit a CCPA request, contact us at <a href="mailto:ClarixDev@outlook.com">ClarixDev@outlook.com</a>.</p>
+
+    <h2>10. Children's Privacy</h2>
+    <p>
+      SupaPanel is intended for use by software developers and is not directed at children under
+      the age of 13 (or 16 in the EEA). We do not knowingly collect personal information from
+      children. If you believe a child has provided us with personal information, please contact
+      us and we will delete it promptly.
+    </p>
+
+    <h2>11. International Data Transfers</h2>
+    <p>
+      Our backend server is hosted in the United States (via Railway). If you are accessing the
+      App from the EEA, UK, or other regions with data protection laws, your subscription data
+      may be transferred to and processed in the United States. We rely on standard contractual
+      clauses and the security measures described in Section 5 to protect such transfers.
+    </p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will update the
+      "Last updated" date at the top of this page. For material changes, we will provide
+      notice within the App. Your continued use of the App after any changes constitutes
+      acceptance of the updated policy.
+    </p>
+
+    <h2>13. Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Privacy Policy or our
+      data practices, please contact us:
+    </p>
+    <ul>
+      <li>Email: <a href="mailto:ClarixDev@outlook.com">ClarixDev@outlook.com</a></li>
+    </ul>
+
+    <footer>
+      <p>© 2026 SupaPanel. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
